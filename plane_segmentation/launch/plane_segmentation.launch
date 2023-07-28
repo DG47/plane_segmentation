@@ -1,0 +1,10 @@
+<launch>
+    <!-- Start the plane segmentation node -->
+    <node name="plane_segmentation_node" pkg="plane_segmentation" type="plane_segmentation.py" output="screen">
+        <!-- Set any parameters here if needed -->
+    </node>
+
+    <!-- Start RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find plane_segmentation)/rviz/plane_segmentation.rviz" />
+</launch>
+
